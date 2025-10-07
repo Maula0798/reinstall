@@ -4,7 +4,7 @@ setlocal EnableDelayedExpansion
 
 set confhome=https://raw.githubusercontent.com/Maula0798/reinstall/main
 set confhome_cn=https://cnb.cool/Maula0798/reinstall/-/git/raw/main
-rem set confhome_cn=https://www.ghproxy.cc/https://raw.githubusercontent.com/bin456789/reinstall/main
+rem set confhome_cn=https://www.ghproxy.cc/https://raw.githubusercontent.com/Maula0798/reinstall/main
 
 set pkgs=curl,cpio,p7zip,dos2unix,jq,xz,gzip,zstd,openssl,bind-utils,libiconv,binutils
 set cmds=curl,cpio,p7zip,dos2unix,jq,xz,gzip,zstd,openssl,nslookup,iconv,ar
@@ -238,4 +238,5 @@ for %%c in (%cmds_space%) do (
     )
 )
 exit /b 0
+
 
