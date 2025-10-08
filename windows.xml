@@ -104,6 +104,11 @@
                     <!-- <Path>DISM /Online /Set-ReservedStorageState /State:Disabled</Path> -->
                     <!-- <Path>powershell "Set-WindowsReservedStorageState -State Disabled; exit"</Path> -->
                 </RunSynchronousCommand>
+                <RunSynchronousCommand wcm:action="add">
+                    <Order>90</Order>
+                    <Description>Disable Account Lockout</Description>
+                    <Path>cmd /c net accounts /lockoutthreshold:0</Path>
+                </RunSynchronousCommand>
                 <!-- win7 在此阶段找不到网卡 -->
                 <!-- <RunSynchronousCommand wcm:action="add">
                     <Order>5</Order>
@@ -164,3 +169,4 @@
         </component>
     </settings>
 </unattend>
+
