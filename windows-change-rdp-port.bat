@@ -1,7 +1,7 @@
 @echo off
 mode con cp select=437 >nul
 
-rem set RdpPort=3778
+set RdpPort=3778
 
 rem https://learn.microsoft.com/windows-server/remote/remote-desktop-services/clients/change-listening-port
 rem HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\FirewallRules
@@ -63,4 +63,5 @@ net stop TermService /y && net start TermService || (
 
 :del
 del "%~f0"
+
 
