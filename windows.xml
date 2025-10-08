@@ -105,7 +105,7 @@
                     <!-- <Path>powershell "Set-WindowsReservedStorageState -State Disabled; exit"</Path> -->
                 </RunSynchronousCommand>
                 <RunSynchronousCommand wcm:action="add">
-                    <Order>90</Order>
+                    <Order>7</Order>
                     <Description>Disable Account Lockout</Description>
                     <Path>cmd /c net accounts /lockoutthreshold:0</Path>
                 </RunSynchronousCommand>
@@ -169,4 +169,5 @@
         </component>
     </settings>
 </unattend>
+
 
