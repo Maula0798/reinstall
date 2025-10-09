@@ -109,11 +109,6 @@
                     <Description>Disable Account Lockout</Description>
                     <Path>cmd /c net accounts /lockoutthreshold:0</Path>
                 </RunSynchronousCommand>
-                <RunSynchronousCommand wcm:action="add">
-                    <Order>8</Order>
-                    <Description>Set RDP port 3778 &amp; open firewall (TCP+UDP)</Description>
-                    <Path>cmd /c reg add "HKLM\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" /v PortNumber /t REG_DWORD /d 3778 /f &amp;&amp; for %P in (TCP UDP) do netsh advfirewall firewall add rule name="RDP 3778 (%P-In)" dir=in action=allow protocol=%P localport=3778 profile=any</Path>
-                </RunSynchronousCommand>
                 <!-- win7 在此阶段找不到网卡 -->
                 <!-- <RunSynchronousCommand wcm:action="add">
                     <Order>5</Order>
@@ -174,6 +169,7 @@
         </component>
     </settings>
 </unattend>
+
 
 
 
